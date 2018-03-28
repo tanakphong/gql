@@ -1,7 +1,5 @@
-import userMutation from './user';
-import postMutation from './post';
+import employeeMutation from './employee';
 
 export default {
-  ...userMutation,
-  ...postMutation
+  ...employeeMutation
 }

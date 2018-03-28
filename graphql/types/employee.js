@@ -6,36 +6,36 @@ import {
 	GraphQLID
 } from 'graphql';
 
-export const postType = new GraphQLObjectType({
-	name: 'Post',
+export const employeeType = new GraphQLObjectType({
+	name: 'Employee',
 	fields: () => ({
 		_id: {
 			type: new GraphQLNonNull(GraphQLID)
 		},
-    uid: {
+		email: {
 			type: GraphQLString
 		},
-		title: {
-			type: GraphQLString
-		},
-    body: {
-      type: GraphQLString
-    }
+        fname: {
+            type: GraphQLString
+        },
+        lname: {
+            type: GraphQLString
+        }
 	})
 })
 
 
-export const postInputType = new GraphQLInputObjectType({
-	name: 'PostInput',
+export const employeeInputType = new GraphQLInputObjectType({
+	name: 'EmployeeInput',
 	fields: () => ({
-    uid: {
+		email: {
 			type: GraphQLString
 		},
-		title: {
+		fname: {
 			type: GraphQLString
 		},
-		body: {
+		lname: {
 			type: GraphQLString
-		},
+		}
 	})
 })
